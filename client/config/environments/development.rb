@@ -22,5 +22,5 @@ ApiClientDemo::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 
-  config.api_endpoint = "http://localhost:3001"
+  config.api_endpoint = "http://localhost:3333"
 end
