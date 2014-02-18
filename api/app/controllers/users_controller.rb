@@ -4,7 +4,9 @@ class UsersController < ApplicationController
 
   def index
     query_params = params.slice(:first_name, :last_name, :email)
-    respond_with(User.includes(:addresses).where(query_params))
+    # respond_with(User.includes(:addresses).where(query_params))
+    @users = User.includes(:addresses).where(query_params)
+    render json: @users
   end
 
   def show
